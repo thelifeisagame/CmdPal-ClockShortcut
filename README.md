@@ -1,6 +1,9 @@
+
 # PowerToys Command Palette - Clock Extension
 
 An elegant and customizable clock extension for the PowerToys Command Palette dock that displays live time and date.
+[demo1.webm](https://github.com/user-attachments/assets/393a5b71-26bb-4922-8e68-fa26481a6a9f)
+[demo2.webm](https://github.com/user-attachments/assets/3f908535-d565-4204-b0b9-879f8cd4284d)
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-brightgreen.svg)
