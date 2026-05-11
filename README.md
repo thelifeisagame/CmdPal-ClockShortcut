@@ -1,53 +1,71 @@
 # PowerToys Command Palette - Clock Extension
 
-Une extension élégante et personnalisable pour le dock de PowerToys Command Palette qui affiche l'heure et la date en direct.
+An elegant and customizable clock extension for the PowerToys Command Palette dock that displays live time and date.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-brightgreen.svg)
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- **Affichage en direct** : Heure et date affichées directement dans le dock.
-- **Actions rapides (Clic Gauche)** : Ouvre le centre de notifications Windows (Win + N).
-- **Menu Contextuel (Clic Droit)** :
-  - Ouvrir les paramètres rapides (Win + A).
-  - Copier l'heure actuelle.
-  - Copier la date actuelle.
-- **Personnalisation complète** :
-  - Langues : Français, Anglais (détection automatique).
-  - Format heure : 24h ou 12h (avec option AM/PM).
-  - Affichage des secondes : On/Off.
-  - Format date : Court (11/05/2026), Complet (Lundi 11 Mai 2026) ou ISO (2026-05-11).
+- **Live Display**: Time and date shown directly in the dock.
+- **Quick Actions (Left Click)**: Opens the Windows Notification Center (Win + N).
+- **Context Menu (Right Click)**:
+  - Open Quick Settings (Win + A).
+  - Copy current time.
+  - Copy current date.
+- **Full Customization**:
+  - Languages: English, French (auto-detected).
+  - Time Format: 24h or 12h (with optional AM/PM toggle).
+  - Seconds Display: Toggle on/off.
+  - Date Format: Short (11/05/2026), Full (Monday, May 11, 2026), or ISO (2026-05-11).
 
-## 🚀 Installation (Développement)
+## 🚀 Installation
 
-Pour l'instant, l'extension doit être enregistrée manuellement en tant qu'extension de développement :
+### Option 1: Using a Release ZIP (Easiest)
+1. Download the latest release `.zip` file from the [Releases](https://github.com/YOUR_USERNAME/PowerToys-Clock-Extension/releases) page.
+2. Extract the ZIP to a permanent folder on your PC.
+3. Open PowerShell as an Administrator in that folder.
+4. Run the following command to register the extension:
+   ```powershell
+   Add-AppxPackage -Path ".\AppxManifest.xml" -Register
+   ```
+5. In PowerToys Command Palette, run the `Reload` command -> **Reload Command Palette extensions**.
 
-1. **Prérequis** :
-   - PowerToys installé (avec le Dock Command Palette activé).
-   - [Mode Développeur](https://learn.microsoft.com/windows/apps/get-started/enable-your-device-for-development) activé dans les paramètres Windows.
+### Option 2: Build from Source
+1. **Prerequisites**:
+   - [PowerToys](https://github.com/microsoft/PowerToys) installed with Command Palette Dock enabled.
+   - [Developer Mode](https://learn.microsoft.com/windows/apps/get-started/enable-your-device-for-development) enabled in Windows Settings.
+   - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0) installed.
 
-2. **Compilation** :
-   - Ouvrez la solution `Clock.sln` dans Visual Studio 2022.
-   - Compilez en configuration **Debug** pour votre architecture (**x64** ou **ARM64**).
+2. **Clone the repository**:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/PowerToys-Clock-Extension.git
+   cd PowerToys-Clock-Extension
+   ```
 
-3. **Enregistrement** :
-   Ouvrez PowerShell et exécutez la commande suivante (adaptez le chemin vers votre dossier de build) :
+3. **Build**:
+   You can build using Visual Studio 2022 or via the CLI:
+   ```powershell
+   dotnet build Clock\Clock.csproj -c Debug -r win-x64
+   ```
+   *(Change `win-x64` to `win-arm64` if you are on an ARM device)*.
+
+4. **Register**:
    ```powershell
    Add-AppxPackage -Path ".\Clock\bin\Debug\net9.0-windows10.0.26100.0\win-x64\AppxManifest.xml" -Register
    ```
 
-4. **Chargement** :
-   - Ouvrez la Command Palette de PowerToys.
-   - Tapez `Reload` et choisissez **Reload Command Palette extensions**.
-   - Cherchez "Clock" et épinglez-la au dock.
+5. **Load**:
+   - Open Command Palette.
+   - Run `Reload` -> **Reload Command Palette extensions**.
+   - Search for "Clock" and pin it to your dock.
 
-## 🛠️ Technologies utilisées
+## 🛠️ Built With
 
 - C# / .NET 9
 - WinUI 3 / Windows App SDK
 - PowerToys Command Palette Extension SDK
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
