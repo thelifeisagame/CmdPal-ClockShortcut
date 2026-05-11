@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Clock (Package)": {
+      "commandName": "MsixPackage",
+      "doNotLaunchApp": true
+    },
+    "Clock (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
