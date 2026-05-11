@@ -28,8 +28,9 @@ https://github.com/user-attachments/assets/56e669fc-603f-44b1-901c-2ce5488b48a8
 ## 🚀 Installation
 
 ### Option 1: Using a Release ZIP (Easiest)
-1. Download the latest release `.zip` file from the [Releases](https://github.com/YOUR_USERNAME/PowerToys-Clock-Extension/releases) page.
-2. Extract the ZIP to a permanent folder on your PC.
+1. **Prerequisite**: Ensure [Developer Mode](https://learn.microsoft.com/windows/apps/get-started/enable-your-device-for-development) is enabled in Windows Settings.
+2. Download the latest release `.zip` file from the [Releases](https://github.com/YOUR_USERNAME/PowerToys-Clock-Extension/releases) page.
+3. Extract the ZIP to a permanent folder on your PC.
 3. Open PowerShell as an Administrator in that folder.
 4. Run the following command to register the extension:
    ```powershell
